@@ -31,6 +31,16 @@
       },
       mounted(){
           this.lang='en'
+      this.$axios.post('/apis/test/testToken.php', {
+         username: 'Fred',
+         password: 'Flintstone'
+        })
+          .then(function (response) {
+            console.log(response);
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
       }
     }
 </script>
